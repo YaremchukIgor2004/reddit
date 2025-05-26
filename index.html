@@ -6,33 +6,189 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <script type="module" crossorigin src="/reddit/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/reddit/assets/styles-DvPDDfy5.css">
+    <link rel="stylesheet" crossorigin href="/reddit/assets/styles-CYsmCqFc.css">
   </head>
   <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/reddit/assets/sprite-E8vg0sBb.svg#logo"></use>
+    <div class="layout">
+      <!-- Бічна панель -->
+      <!-- src/partials/aside.html -->
+<aside class="sidebar">
+  <!-- — Logo — -->
+  <div class="sidebar__logo">
+    <svg class="sidebar__logo-icon" aria-hidden="true">
+      <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#logo"></use>
+    </svg>
+    <span class="sidebar__logo-text">reddit</span>
+  </div>
+
+  <!-- — User email + toggle — -->
+  <div class="sidebar__user">
+    <span class="sidebar__user-email">kikoherrosc@gmail.com</span>
+    <button class="sidebar__user-toggle" aria-label="Toggle user menu">▾</button>
+  </div>
+
+  <!-- — Search field — -->
+  <div class="sidebar__search">
+    <svg class="sidebar__search-icon" aria-hidden="true">
+      <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-search"></use>
+    </svg>
+    <input
+      type="search"
+      class="sidebar__search-input"
+      placeholder="Search"
+      aria-label="Search"
+    />
+  </div>
+
+  <!-- — Main navigation — -->
+  <nav class="sidebar__nav">
+    <ul class="sidebar__nav-list">
+      <!-- Home -->
+      <li class="sidebar__nav-item sidebar__nav-item--active">
+        <a href="#" class="sidebar__nav-link">
+          <svg class="sidebar__nav-icon" aria-hidden="true">
+            <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-home"></use>
+          </svg>
+          Home
+        </a>
+      </li>
+
+      <!-- Notifications -->
+      <li class="sidebar__nav-item">
+        <a href="#" class="sidebar__nav-link">
+          <svg class="sidebar__nav-icon" aria-hidden="true">
+            <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-bell"></use>
+          </svg>
+          Notifications
+        </a>
+      </li>
+
+      <!-- ← Новий пункт My posts -->
+      <li class="sidebar__nav-item">
+        <a href="#" class="sidebar__nav-link">
+          <svg class="sidebar__nav-icon" aria-hidden="true">
+            <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-posts"></use>
+          </svg>
+          My posts
+        </a>
+      </li>
+
+      <!-- My subreddits + список -->
+      <li class="sidebar__nav-item sidebar__nav-dropdown">
+        <a href="#" class="sidebar__nav-link">
+          <svg class="sidebar__nav-icon" aria-hidden="true">
+            <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-subreddit"></use>
+          </svg>
+          My subreddits
+          <svg class="sidebar__nav-icon-chev" aria-hidden="true">
+            <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-chevron-down"></use>
+          </svg>
+        </a>
+        <ul class="sidebar__nav-sublist">
+          <li class="sidebar__nav-subitem">
+            <a href="#" class="sidebar__nav-link">Gaming</a>
+          </li>
+          <li class="sidebar__nav-subitem">
+            <a href="#" class="sidebar__nav-link">Funny</a>
+          </li>
+          <li class="sidebar__nav-subitem">
+            <a href="#" class="sidebar__nav-link">Series</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- — Bottom accordions — -->
+  <div class="sidebar__accordions">
+    <div class="accordion">
+      <button class="accordion__toggle">
+        <svg class="accordion__icon-main" aria-hidden="true">
+          <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-logo"></use>
         </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+        About
+        <svg class="accordion__icon-chev" aria-hidden="true">
+          <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-chevron-down"></use>
+        </svg>
+      </button>
+      <div class="accordion__panel">
+        <a href="#" class="accordion__link">About Reddit</a>
+        <a href="#" class="accordion__link">Careers</a>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <button class="accordion__toggle">
+        <svg class="accordion__icon-main" aria-hidden="true">
+          <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-help"></use>
+        </svg>
+        Help
+        <svg class="accordion__icon-chev" aria-hidden="true">
+          <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-chevron-down"></use>
+        </svg>
+      </button>
+      <div class="accordion__panel">
+        <a href="#" class="accordion__link">User Agreement</a>
+        <a href="#" class="accordion__link">Content Policy</a>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <button class="accordion__toggle">
+        <svg class="accordion__icon-main" aria-hidden="true">
+          <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-tools"></use>
+        </svg>
+        Apps &amp; Tools
+        <svg class="accordion__icon-chev" aria-hidden="true">
+          <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-chevron-down"></use>
+        </svg>
+      </button>
+      <div class="accordion__panel">
+        <a href="#" class="accordion__link">Reddit App</a>
+        <a href="#" class="accordion__link">Reddit Metrics</a>
+      </div>
+    </div>
+  </div>
+</aside>
+
+      <!-- Основний контент: хедер, мейн, футер -->
+      <div class="layout__content">
+        <header class="header">
+  <div class="header__inner container">
+    <!-- Назва секції -->
+    <h1 class="header__title">All subreddits</h1>
+
+    <!-- Вкладковий навбар -->
+    <nav class="header__tabs">
+      <ul class="header__tabs-list">
+        <li class="header__tabs-item header__tabs-item--active">
+          <a href="#" class="header__tabs-link">HOT</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li class="header__tabs-item">
+          <a href="#" class="header__tabs-link">NEW</a>
+        </li>
+        <li class="header__tabs-item">
+          <a href="#" class="header__tabs-link">RISING</a>
+        </li>
+        <li class="header__tabs-item">
+          <a href="#" class="header__tabs-link">CONTROVERSIAL</a>
+        </li>
+        <li class="header__tabs-item">
+          <a href="#" class="header__tabs-link">TOP</a>
+        </li>
+        <li class="header__tabs-item">
+          <a href="#" class="header__tabs-link">GILDED</a>
+        </li>
+        <li class="header__tabs-item">
+          <a href="#" class="header__tabs-link">PROMOTED</a>
         </li>
       </ul>
     </nav>
   </div>
 </header>
 
-
-    <main>
-      <!-- Loads the specified .html file -->
-      <section class="vite-promo">
+        <main>
+          <section class="vite-promo">
   <div class="container">
     <div class="vite-promo-thumb">
       <a
@@ -68,7 +224,7 @@
   </div>
 </section>
 
-      <article class="badges">
+          <article class="badges">
   <div class="container">
     <ul class="badges-list">
       <li class="badges-item">
@@ -105,9 +261,9 @@
   </div>
 </article>
 
-    </main>
+        </main>
 
-    <footer class="footer">
+        <footer class="footer">
   <div class="container">
     <p class="footer-desc">
       Made with ✨ by
@@ -123,6 +279,8 @@
   </div>
 </footer>
 
+      </div>
+    </div>
 
   </body>
 </html>
