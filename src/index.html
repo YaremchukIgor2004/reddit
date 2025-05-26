@@ -8,15 +8,22 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <div class="layout">
+      <!-- Бічна панель -->
+      <load src="./partials/aside.html" />
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+      <!-- Основний контент: хедер, мейн, футер -->
+      <div class="layout__content">
+        <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
 
-    <load src="./partials/footer.html" />
+        <main>
+          <load src="./partials/vite-promo.html" />
+          <load src="./partials/badges.html" />
+        </main>
+
+        <load src="./partials/footer.html" />
+      </div>
+    </div>
 
     <script type="module" src="./main.js"></script>
   </body>

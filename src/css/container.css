@@ -17,3 +17,16 @@
     max-width: 1200px;
   }
 }
+/* === Нові правила для двоколонки+скролу === */
+.layout {
+  display: flex;
+  height: 100vh;      /* вся висота екрану */
+  overflow: hidden;   /* ховаємо скрол body */
+}
+
+.layout__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;   /* скролиться тільки контентна колонка */
+}
