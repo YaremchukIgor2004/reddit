@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign In – Reddit Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Основні стилі -->
+    <!-- Стилі для форм -->
+    <script type="module" crossorigin src="/reddit/signin.js"></script>
+    <link rel="modulepreload" crossorigin href="/reddit/assets/styles-CbQyGjKj.js">
+    <link rel="stylesheet" crossorigin href="/reddit/assets/styles-Dl9cyb9O.css">
+    <link rel="stylesheet" crossorigin href="/reddit/assets/auth-DD4EDJRa.css">
+  </head>
+  <body>
+    <main class="auth auth--signin">
+      <h1 class="auth__title">Sign In</h1>
+      <form id="signin-form" class="form">
+        <label class="form__group">
+          <span class="form__label">Email</span>
+          <input
+            type="email"
+            name="email"
+            required
+            class="form__input"
+            placeholder="you@example.com"
+          />
+        </label>
+        <label class="form__group">
+          <span class="form__label">Password</span>
+          <input
+            type="password"
+            name="password"
+            required
+            class="form__input"
+            placeholder="••••••••"
+          />
+        </label>
+        <div class="form__actions">
+          <button type="submit" class="btn btn--primary">
+            Sign In
+          </button>
+        </div>
+        <div class="form__footer">
+          <p>
+            Don’t have an account?
+            <a href="./signup.html">Sign Up</a>
+          </p>
+        </div>
+        <div id="signin-error" class="form__error"></div>
+      </form>
+    </main>
+
+    <!-- Лише скрипт для Sign In -->
+  </body>
+</html>

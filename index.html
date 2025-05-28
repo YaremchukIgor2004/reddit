@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <script type="module" crossorigin src="/reddit/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/reddit/assets/styles-CYsmCqFc.css">
+    <link rel="modulepreload" crossorigin href="/reddit/assets/styles-CbQyGjKj.js">
+    <link rel="stylesheet" crossorigin href="/reddit/assets/styles-Dl9cyb9O.css">
   </head>
   <body>
     <div class="layout">
       <!-- Бічна панель -->
       <!-- src/partials/aside.html -->
 <aside class="sidebar">
-  <!-- — Logo — -->
+  <!-- Logo -->
   <div class="sidebar__logo">
     <svg class="sidebar__logo-icon" aria-hidden="true">
       <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#logo"></use>
@@ -21,13 +22,18 @@
     <span class="sidebar__logo-text">reddit</span>
   </div>
 
-  <!-- — User email + toggle — -->
+  <!-- User block with dropdown -->
   <div class="sidebar__user">
-    <span class="sidebar__user-email">kikoherrosc@gmail.com</span>
+    <span class="sidebar__user-name"></span>
     <button class="sidebar__user-toggle" aria-label="Toggle user menu">▾</button>
+    <div class="sidebar__user-menu">
+      <a href="signin.html" class="sidebar__user-menu-item">Sign In</a>
+      <a href="signup.html" class="sidebar__user-menu-item">Sign Up</a>
+      <a href="#" class="sidebar__user-menu-item sidebar__user-logout">Log Out</a>
+    </div>
   </div>
 
-  <!-- — Search field — -->
+  <!-- Search field -->
   <div class="sidebar__search">
     <svg class="sidebar__search-icon" aria-hidden="true">
       <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-search"></use>
@@ -40,10 +46,9 @@
     />
   </div>
 
-  <!-- — Main navigation — -->
+  <!-- Main navigation -->
   <nav class="sidebar__nav">
     <ul class="sidebar__nav-list">
-      <!-- Home -->
       <li class="sidebar__nav-item sidebar__nav-item--active">
         <a href="#" class="sidebar__nav-link">
           <svg class="sidebar__nav-icon" aria-hidden="true">
@@ -52,8 +57,6 @@
           Home
         </a>
       </li>
-
-      <!-- Notifications -->
       <li class="sidebar__nav-item">
         <a href="#" class="sidebar__nav-link">
           <svg class="sidebar__nav-icon" aria-hidden="true">
@@ -62,8 +65,6 @@
           Notifications
         </a>
       </li>
-
-      <!-- ← Новий пункт My posts -->
       <li class="sidebar__nav-item">
         <a href="#" class="sidebar__nav-link">
           <svg class="sidebar__nav-icon" aria-hidden="true">
@@ -72,8 +73,6 @@
           My posts
         </a>
       </li>
-
-      <!-- My subreddits + список -->
       <li class="sidebar__nav-item sidebar__nav-dropdown">
         <a href="#" class="sidebar__nav-link">
           <svg class="sidebar__nav-icon" aria-hidden="true">
@@ -98,57 +97,6 @@
       </li>
     </ul>
   </nav>
-
-  <!-- — Bottom accordions — -->
-  <div class="sidebar__accordions">
-    <div class="accordion">
-      <button class="accordion__toggle">
-        <svg class="accordion__icon-main" aria-hidden="true">
-          <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-logo"></use>
-        </svg>
-        About
-        <svg class="accordion__icon-chev" aria-hidden="true">
-          <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-chevron-down"></use>
-        </svg>
-      </button>
-      <div class="accordion__panel">
-        <a href="#" class="accordion__link">About Reddit</a>
-        <a href="#" class="accordion__link">Careers</a>
-      </div>
-    </div>
-
-    <div class="accordion">
-      <button class="accordion__toggle">
-        <svg class="accordion__icon-main" aria-hidden="true">
-          <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-help"></use>
-        </svg>
-        Help
-        <svg class="accordion__icon-chev" aria-hidden="true">
-          <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-chevron-down"></use>
-        </svg>
-      </button>
-      <div class="accordion__panel">
-        <a href="#" class="accordion__link">User Agreement</a>
-        <a href="#" class="accordion__link">Content Policy</a>
-      </div>
-    </div>
-
-    <div class="accordion">
-      <button class="accordion__toggle">
-        <svg class="accordion__icon-main" aria-hidden="true">
-          <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-tools"></use>
-        </svg>
-        Apps &amp; Tools
-        <svg class="accordion__icon-chev" aria-hidden="true">
-          <use xlink:href="/reddit/assets/sprite-E8vg0sBb.svg#icon-chevron-down"></use>
-        </svg>
-      </button>
-      <div class="accordion__panel">
-        <a href="#" class="accordion__link">Reddit App</a>
-        <a href="#" class="accordion__link">Reddit Metrics</a>
-      </div>
-    </div>
-  </div>
 </aside>
 
       <!-- Основний контент: хедер, мейн, футер -->
@@ -188,79 +136,82 @@
 </header>
 
         <main>
-          <section class="vite-promo">
-  <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
-        <img
-          class="pic"
-          src="/reddit/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
-        />
-      </a>
+          <section class="posts">
+  <!-- Post #1 -->
+  <article class="post-card">
+    <div class="post-card__media">
+      <img src="https://via.placeholder.com/600x300" alt="Example post image" />
     </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
-    </h1>
-  </div>
+    <div class="post-card__body">
+      <h2 class="post-card__title">Знайомство з новим фреймворком</h2>
+      <p class="post-card__info">
+        2 hours ago by <a href="#" class="post-card__author">frontend_dev</a>
+        in <a href="#" class="post-card__subreddit">/r/webdev</a>
+      </p>
+      <p class="post-card__text">
+        Розповідаю про перші кроки з Vite та чому обрав саме його для нового проекту...
+      </p>
+    </div>
+    <div class="post-card__footer">
+      <!-- вертикальний блок голосувань -->
+      <div class="post-card__votes">
+        <button class="post-card__vote-up">▲</button>
+        <span class="post-card__vote-diff">+525</span>
+        <button class="post-card__vote-down">▼</button>
+      </div>
+      <!-- кнопка коментарів -->
+      <button class="post-card__comments">💬 87</button>
+    </div>
+  </article>
+
+  <!-- Post #2 -->
+  <article class="post-card">
+    <div class="post-card__media"></div>
+    <div class="post-card__body">
+      <h2 class="post-card__title">Опитування: Яка IDE краща?</h2>
+      <p class="post-card__info">
+        5 hours ago by <a href="#" class="post-card__author">code_master</a>
+        in <a href="#" class="post-card__subreddit">/r/programming</a>
+      </p>
+      <p class="post-card__text">
+        Друзі, а ви яку IDE використовуєте під час розробки: VS Code, WebStorm чи щось інше?
+      </p>
+    </div>
+    <div class="post-card__footer">
+      <div class="post-card__votes">
+        <button class="post-card__vote-up">▲</button>
+        <span class="post-card__vote-diff">+1050</span>
+        <button class="post-card__vote-down">▼</button>
+      </div>
+      <button class="post-card__comments">💬 215</button>
+    </div>
+  </article>
+
+  <!-- Post #3 -->
+  <article class="post-card">
+    <div class="post-card__media">
+      <img src="https://via.placeholder.com/600x350" alt="Cat gif" />
+    </div>
+    <div class="post-card__body">
+      <h2 class="post-card__title">Кумедний кіт</h2>
+      <p class="post-card__info">
+        1 day ago by <a href="#" class="post-card__author">funny_cat</a>
+        in <a href="#" class="post-card__subreddit">/r/funny</a>
+      </p>
+      <p class="post-card__text">
+        Подивіться на цього милого котика, який намагається зловити власний хвіст!
+      </p>
+    </div>
+    <div class="post-card__footer">
+      <div class="post-card__votes">
+        <button class="post-card__vote-up">▲</button>
+        <span class="post-card__vote-diff">+2880</span>
+        <button class="post-card__vote-down">▼</button>
+      </div>
+      <button class="post-card__comments">💬 654</button>
+    </div>
+  </article>
 </section>
-
-          <article class="badges">
-  <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HTML Inject
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Full Reload
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sort Media Queries
-        </a>
-      </li>
-    </ul>
-  </div>
-</article>
-
         </main>
 
         <footer class="footer">
