@@ -1,32 +1,33 @@
-// Обробка Sign Up форми
+// signup.js
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('signup-form');
   const errorBox = document.getElementById('signup-error');
 
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    const data = new FormData(form);
-    const username = data.get('username').trim();
-    const email = data.get('email').trim();
-    const pass = data.get('password');
-    const conf = data.get('confirm');
-
-    // Валідація
-    if (!username || !email || !pass) {
-      errorBox.textContent = 'Please fill in all fields.';
-      return;
-    }
-    if (pass !== conf) {
-      errorBox.textContent = 'Passwords do not match.';
+    const data = Object.fromEntries(new FormData(form));
+    if (data.password !== data.confirm) {
+      errorBox.textContent = 'Паролі не співпадають.';
       return;
     }
 
-    // Зберігаємо користувача й сесію
-    const user = { username, email, password: pass };
-    localStorage.setItem('user', JSON.stringify(user));
-    localStorage.setItem('session', JSON.stringify(user));
+    try {
+      const res = await fetch('/api/users', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: data.username,
+          email: data.email,
+          password: data.password
+        })
+      });
+      const user = await res.json();
+      if (!res.ok) throw new Error(user.error || 'Signup failed');
 
-    // Переходимо на головну
-    window.location.href = './index.html';
+      localStorage.setItem('sessionUser', JSON.stringify(user));
+      window.location.href = './index.html';
+    } catch (err) {
+      errorBox.textContent = err.message;
+    }
   });
 });

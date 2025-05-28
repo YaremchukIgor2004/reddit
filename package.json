@@ -6,9 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --base=/reddit/",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server.js",
+    "dev:all": "concurrently \"npm run start\" \"npm run dev\""
   },
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "glob": "^11.0.0",
     "postcss": "^8.4.41",
     "postcss-sort-media-queries": "^5.2.0",
@@ -17,7 +20,19 @@
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "express": "^5.1.0",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
-  }
+  },
+  "description": "Bu proje Vite kullanılarak oluşturulmuştur. Ek özelliklerin tanınması ve özelleştirilmesi için [belgelere bakın](https://vitejs.dev/).",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YaremchukIgor2004/reddit.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/YaremchukIgor2004/reddit/issues"
+  },
+  "homepage": "https://github.com/YaremchukIgor2004/reddit#readme"
 }

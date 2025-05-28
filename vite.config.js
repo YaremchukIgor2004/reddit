@@ -10,6 +10,17 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
+    server: {
+      proxy: {
+        '/api': {
+          target: 'http://localhost:3000',
+          changeOrigin: true,
+          secure: false,
+          rewrite: path => path.replace(/^\/api/, '/api'),
+        },
+      },
+    },
+
     build: {
       sourcemap: true,
       rollupOptions: {
@@ -37,6 +48,7 @@ export default defineConfig(({ command }) => {
       outDir: '../dist',
       emptyOutDir: true,
     },
+
     plugins: [
       injectHTML(),
       FullReload(['./src/**/**.html']),
