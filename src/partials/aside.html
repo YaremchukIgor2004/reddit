@@ -1,6 +1,6 @@
 <!-- src/partials/aside.html -->
 <aside class="sidebar">
-  <!-- — Logo — -->
+  <!-- Logo -->
   <div class="sidebar__logo">
     <svg class="sidebar__logo-icon" aria-hidden="true">
       <use xlink:href="img/sprite.svg#logo"></use>
@@ -8,13 +8,18 @@
     <span class="sidebar__logo-text">reddit</span>
   </div>
 
-  <!-- — User email + toggle — -->
+  <!-- User block with dropdown -->
   <div class="sidebar__user">
     <span class="sidebar__user-email">kikoherrosc@gmail.com</span>
     <button class="sidebar__user-toggle" aria-label="Toggle user menu">▾</button>
+    <div class="sidebar__user-menu">
+     <a href="../signin.html" class="sidebar__user-menu-item">Sign In</a>
+     <a href="../signup.html" class="sidebar__user-menu-item">Sign Up</a>
+     <a href="#" class="sidebar__user-menu-item sidebar__user-logout">Log Out</a>
+   </div>
   </div>
 
-  <!-- — Search field — -->
+  <!-- Search field -->
   <div class="sidebar__search">
     <svg class="sidebar__search-icon" aria-hidden="true">
       <use xlink:href="img/sprite.svg#icon-search"></use>
@@ -27,10 +32,9 @@
     />
   </div>
 
-  <!-- — Main navigation — -->
+  <!-- Main navigation -->
   <nav class="sidebar__nav">
     <ul class="sidebar__nav-list">
-      <!-- Home -->
       <li class="sidebar__nav-item sidebar__nav-item--active">
         <a href="#" class="sidebar__nav-link">
           <svg class="sidebar__nav-icon" aria-hidden="true">
@@ -39,8 +43,6 @@
           Home
         </a>
       </li>
-
-      <!-- Notifications -->
       <li class="sidebar__nav-item">
         <a href="#" class="sidebar__nav-link">
           <svg class="sidebar__nav-icon" aria-hidden="true">
@@ -49,8 +51,6 @@
           Notifications
         </a>
       </li>
-
-      <!-- ← Новий пункт My posts -->
       <li class="sidebar__nav-item">
         <a href="#" class="sidebar__nav-link">
           <svg class="sidebar__nav-icon" aria-hidden="true">
@@ -59,8 +59,6 @@
           My posts
         </a>
       </li>
-
-      <!-- My subreddits + список -->
       <li class="sidebar__nav-item sidebar__nav-dropdown">
         <a href="#" class="sidebar__nav-link">
           <svg class="sidebar__nav-icon" aria-hidden="true">
@@ -85,55 +83,4 @@
       </li>
     </ul>
   </nav>
-
-  <!-- — Bottom accordions — -->
-  <div class="sidebar__accordions">
-    <div class="accordion">
-      <button class="accordion__toggle">
-        <svg class="accordion__icon-main" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#icon-logo"></use>
-        </svg>
-        About
-        <svg class="accordion__icon-chev" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
-        </svg>
-      </button>
-      <div class="accordion__panel">
-        <a href="#" class="accordion__link">About Reddit</a>
-        <a href="#" class="accordion__link">Careers</a>
-      </div>
-    </div>
-
-    <div class="accordion">
-      <button class="accordion__toggle">
-        <svg class="accordion__icon-main" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#icon-help"></use>
-        </svg>
-        Help
-        <svg class="accordion__icon-chev" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
-        </svg>
-      </button>
-      <div class="accordion__panel">
-        <a href="#" class="accordion__link">User Agreement</a>
-        <a href="#" class="accordion__link">Content Policy</a>
-      </div>
-    </div>
-
-    <div class="accordion">
-      <button class="accordion__toggle">
-        <svg class="accordion__icon-main" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#icon-tools"></use>
-        </svg>
-        Apps &amp; Tools
-        <svg class="accordion__icon-chev" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
-        </svg>
-      </button>
-      <div class="accordion__panel">
-        <a href="#" class="accordion__link">Reddit App</a>
-        <a href="#" class="accordion__link">Reddit Metrics</a>
-      </div>
-    </div>
-  </div>
 </aside>

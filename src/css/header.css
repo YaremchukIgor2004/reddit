@@ -4,8 +4,6 @@
 .header {
   position: sticky;
   top: 0;
-  left: 280px;                   /* відступ праворуч на ширину aside */
-  width: calc(100% - 280px);     /* займає весь залишковий простір */
   z-index: 10;
   background-color: #fff;
   border-bottom: 1px solid #e5e5e5;
@@ -54,6 +52,7 @@
   text-decoration: none;
   color: #888888;
   border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
 }
 
 /* ===== Active tab ===== */

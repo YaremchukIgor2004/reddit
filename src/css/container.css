@@ -29,4 +29,5 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;   /* скролиться тільки контентна колонка */
+  margin-left: 280px;
 }

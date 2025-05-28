@@ -3,9 +3,7 @@
 /* Sidebar container */
 .sidebar {
   position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
+  top: 0; left: 0; bottom: 0;
   box-sizing: border-box;
   width: 280px;
   height: 100vh;
@@ -14,6 +12,7 @@
   border-right: 1px solid #e5e5e5;
   display: flex;
   flex-direction: column;
+  z-index: 5;
 }
 
 /* Logo */
@@ -23,8 +22,7 @@
   margin-bottom: 24px;
 }
 .sidebar__logo-icon {
-  width: 24px;
-  height: 24px;
+  width: 24px; height: 24px;
   fill: #ff4500;
   margin-right: 8px;
 }
@@ -34,23 +32,54 @@
   color: #ff4500;
 }
 
-/* User block */
+/* User block & dropdown */
 .sidebar__user {
+  position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 24px;
 }
 .sidebar__user-email {
   font-size: 0.9rem;
-  color: #333333;
+  color: #333;
 }
 .sidebar__user-toggle {
   margin-left: auto;
   background: none;
   border: none;
   font-size: 0.8rem;
-  color: #666666;
+  color: #666;
   cursor: pointer;
+}
+.sidebar__user-menu {
+  position: absolute;
+  top: 100%; left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  display: none;
+  flex-direction: column;
+  margin-top: 4px;
+  z-index: 10;
+}
+.sidebar__user-menu.visible {
+  display: flex;
+}
+.sidebar__user-menu-item {
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.sidebar__user-menu-item:hover {
+  background-color: #f6f6f6;
+}
+.sidebar__user-email:empty + .sidebar__user-toggle + .sidebar__user-menu .sidebar__user-logout {
+  display: none;
 }
 
 /* Search */
@@ -62,52 +91,47 @@
   width: 100%;
   padding: 8px 12px 8px 36px;
   font-size: 0.9rem;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
 }
 .sidebar__search-icon {
   position: absolute;
-  top: 50%;
-  left: 12px;
-  width: 16px;
-  height: 16px;
-  fill: #888888;
+  top: 50%; left: 12px;
+  width: 16px; height: 16px;
+  fill: #888;
   transform: translateY(-50%);
 }
 
 /* Main navigation */
 .sidebar__nav-list {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
   flex-shrink: 0;
 }
 .sidebar__nav-item {
   margin: 4px 0;
 }
-.sidebar__nav-item--active > .sidebar__nav-link {
-  color: #ff4500;
-  font-weight: 600;
-}
 .sidebar__nav-link {
   display: flex;
   align-items: center;
-  color: #333333;
+  color: #333;
   text-decoration: none;
   font-size: 0.9rem;
   padding: 4px 0;
 }
 .sidebar__nav-icon {
-  width: 16px;
-  height: 16px;
+  width: 16px; height: 16px;
   fill: currentColor;
   margin-right: 8px;
 }
+.sidebar__nav-item--active > .sidebar__nav-link {
+  color: #ff4500;
+  font-weight: 600;
+}
 .sidebar__nav-icon-chev {
-  width: 16px;
-  height: 16px;
-  fill: #666666;
+  width: 16px; height: 16px;
+  fill: #666;
   margin-left: auto;
   transition: transform 0.2s ease;
 }
@@ -117,62 +141,16 @@
   list-style: none;
   margin: 4px 0 0 16px;
   padding: 0;
+  display: none;
+}
+.sidebar__nav-item--active > .sidebar__nav-sublist {
+  display: block;
 }
 .sidebar__nav-subitem {
   margin: 4px 0;
 }
 .sidebar__nav-subitem .sidebar__nav-link {
   font-size: 0.85rem;
-  color: #555555;
+  color: #555;
   padding: 4px 0;
-}
-
-/* Bottom accordions */
-.sidebar__accordions {
-  margin-top: auto;
-}
-.accordion {
-  margin: 4px 0;
-}
-.accordion__toggle {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background: none;
-  border: none;
-  padding: 4px 0;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-}
-.accordion__icon-main {
-  width: 16px;
-  height: 16px;
-  fill: #333333;
-  margin-right: 8px;
-}
-.accordion__icon-chev {
-  width: 16px;
-  height: 16px;
-  fill: #666666;
-  margin-left: auto;
-  transition: transform 0.2s ease;
-}
-.accordion--open .accordion__icon-chev {
-  transform: rotate(-180deg);
-}
-.accordion__panel {
-  display: none;
-  flex-direction: column;
-  margin-top: 8px;
-}
-.accordion--open .accordion__panel {
-  display: flex;
-}
-.accordion__link {
-  font-size: 0.85rem;
-  color: #555555;
-  text-decoration: none;
-  padding: 4px 0;
-  padding-left: 24px;
 }

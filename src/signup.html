@@ -1,0 +1,90 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign Up – Reddit Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Основные стили проекта -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Стили для модалок и форм -->
+    <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet" href="./css/auth.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <!-- Боковая панель -->
+      <load src="./partials/aside.html" />
+
+      <!-- Контентная колонка -->
+      <div class="layout__content">
+        <!-- Header (если нужен) -->
+        <!-- <load src="./header.html" /> -->
+
+        <main class="container">
+          <section class="auth auth--signup">
+            <h1 class="auth__title">Sign Up</h1>
+            <form id="signup-form" class="form">
+              <label class="form__group">
+                <span class="form__label">Username</span>
+                <input
+                  type="text"
+                  name="username"
+                  required
+                  class="form__input"
+                  placeholder="Your username"
+                />
+              </label>
+              <label class="form__group">
+                <span class="form__label">Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  class="form__input"
+                  placeholder="you@example.com"
+                />
+              </label>
+              <label class="form__group">
+                <span class="form__label">Password</span>
+                <input
+                  type="password"
+                  name="password"
+                  required
+                  class="form__input"
+                  placeholder="••••••••"
+                />
+              </label>
+              <label class="form__group">
+                <span class="form__label">Confirm Password</span>
+                <input
+                  type="password"
+                  name="confirm"
+                  required
+                  class="form__input"
+                  placeholder="••••••••"
+                />
+              </label>
+              <div class="form__actions">
+                <button type="submit" class="btn btn--primary">
+                  Sign Up
+                </button>
+              </div>
+              <div class="form__footer">
+                <p>
+                  Already have an account?
+                  <a href="./signin.html">Sign In</a>
+                </p>
+              </div>
+              <div id="signup-error" class="form__error"></div>
+            </form>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- Скрипты -->
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./js/signup.js"></script>
+  </body>
+</html>

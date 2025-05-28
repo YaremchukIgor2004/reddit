@@ -1,0 +1,95 @@
+/* src/css/auth.css */
+
+/* Контейнер автентифікації */
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 16px;
+}
+
+/* Заголовок форми */
+.auth__title {
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333333;
+  text-align: center;
+}
+
+/* Сама форма */
+.form {
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 24px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+/* Група поля вводу */
+.form__group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Підпис до поля */
+.form__label {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+/* Саме поле вводу */
+.form__input {
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Кнопки дій */
+.form__actions {
+  text-align: center;
+  margin-top: 16px;
+}
+.btn--primary {
+  background-color: #ff4500;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn--primary:hover {
+  background-color: #e03e00;
+}
+
+/* Футер форми з посиланням */
+.form__footer {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+.form__footer a {
+  color: #0079d3;
+  text-decoration: none;
+}
+.form__footer a:hover {
+  text-decoration: underline;
+}
+
+/* Повідомлення про помилку */
+.form__error {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #d00;
+  min-height: 1em;
+  text-align: center;
+}
