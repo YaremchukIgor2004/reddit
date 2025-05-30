@@ -1,6 +1,6 @@
 /* src/css/auth.css */
 
-/* Контейнер автентифікації */
+/* Authentication container */
 .auth {
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   padding: 80px 16px;
 }
 
-/* Заголовок форми */
+/* Form header */
 .auth__title {
   margin-bottom: 24px;
   font-size: 1.5rem;
@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-/* Сама форма */
+/* Form */
 .form {
   width: 100%;
   max-width: 400px;
@@ -29,21 +29,21 @@
   box-sizing: border-box;
 }
 
-/* Група поля вводу */
+/* Input */
 .form__group {
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
 }
 
-/* Підпис до поля */
+/* Label */
 .form__label {
   margin-bottom: 8px;
   font-size: 0.9rem;
   color: #555555;
 }
 
-/* Саме поле вводу */
+/* Form input */
 .form__input {
   padding: 10px 12px;
   font-size: 0.9rem;
@@ -52,7 +52,7 @@
   box-sizing: border-box;
 }
 
-/* Кнопки дій */
+/* Action buttons */
 .form__actions {
   text-align: center;
   margin-top: 16px;
@@ -71,7 +71,7 @@
   background-color: #e03e00;
 }
 
-/* Футер форми з посиланням */
+/* Footer with link */
 .form__footer {
   margin-top: 16px;
   font-size: 0.85rem;
@@ -85,7 +85,7 @@
   text-decoration: underline;
 }
 
-/* Повідомлення про помилку */
+/* Error message */
 .form__error {
   margin-top: 12px;
   font-size: 0.85rem;

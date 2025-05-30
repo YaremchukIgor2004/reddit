@@ -1,0 +1,144 @@
+/* src/css/comments.css */
+
+/* Comment container */
+.comments {
+  margin-top: 24px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+/* Comments title */
+.comments__title {
+  margin: 0 0 12px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Comments list */
+.comments__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Single comment */
+.comment {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Відступ для першого коментаря */
+.comment:first-child {
+  border-top: none;
+}
+
+/* Відступ та лінія для вкладеного коментаря */
+.comment--nested {
+  margin-left: 24px;
+  border-left: 2px solid #e5e5e5;
+  padding-left: 12px;
+}
+
+/* Блок голосування всередині коментаря */
+.comment__votes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 16px;
+}
+
+/* Like/dislike buttons */
+.comment__vote-up,
+.comment__vote-down {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Diff like */
+.comment__vote-diff {
+  margin: 4px 0;
+  font-size: 0.75rem;
+  color: #ff4500;
+}
+
+/* Content comment*/
+.comment__content {
+  flex: 1;
+}
+
+/* Information (author, time) */
+.comment__info {
+  font-size: 0.75rem;
+  color: #555555;
+  margin-bottom: 6px;
+}
+
+/* Comment text */
+.comment__body {
+  margin: 0 0 8px;
+  font-size: 0.875rem;
+  color: #333333;
+  line-height: 1.4;
+}
+
+/* Actions (Reply and counter) */
+.comment__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.comment__reply {
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  color: #888888;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Форма створення нового коментаря */
+.comments__form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 16px;
+}
+
+/* Текстове поле коментаря */
+.comments__textarea {
+  font-size: 0.875rem;
+  padding: 8px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* Кнопка “Comment” */
+.comments__submit {
+  align-self: flex-end;
+  background-color: #ff4500;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.comments__submit:hover {
+  background-color: #e03e00;
+}

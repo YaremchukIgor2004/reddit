@@ -4,26 +4,41 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Reddit</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/views.css" />
   </head>
   <body>
     <div class="layout">
-      <!-- Бічна панель -->
       <load src="./partials/aside.html" />
 
-      <!-- Основний контент: хедер, мейн, футер -->
       <div class="layout__content">
         <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+        <main class="container">
+          <!-- 1) Home -->
+          <div id="view-home" class="view view--active">
+            <section class="posts" id="posts-list"></section>
+          </div>
 
-        <main>
-          <load src="./partials/posts.html" />
+          <!-- 2) Notifications -->
+          <div id="view-notifications" class="view">
+            <p>У вас поки що немає нових сповіщень.</p>
+          </div>
+
+          <!-- 3) My posts -->
+          <div id="view-myposts" class="view">
+            <load src="./partials/myposts.html" />
+          </div>
+
+          <!-- 4) My subreddits -->
+          <div id="view-mysubreddits" class="view">
+            <p>Тут будуть ваші сабредіти.</p>
+          </div>
         </main>
-
-        <load src="./partials/footer.html" />
       </div>
     </div>
 
+    <!-- Скрипти -->
     <script type="module" src="./main.js"></script>
   </body>
 </html>

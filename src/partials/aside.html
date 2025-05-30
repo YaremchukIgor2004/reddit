@@ -2,10 +2,12 @@
 <aside class="sidebar">
   <!-- Logo -->
   <div class="sidebar__logo">
-    <svg class="sidebar__logo-icon" aria-hidden="true">
-      <use xlink:href="img/sprite.svg#logo"></use>
-    </svg>
-    <span class="sidebar__logo-text">reddit</span>
+    <img
+      src="/img/logo.svg"
+      alt="My Logo"
+      class="sidebar__logo-icon"
+    />
+    <span class="sidebar__logo-text">REDDIT</span>
   </div>
 
   <!-- User block with dropdown -->
@@ -22,7 +24,11 @@
   <!-- Search field -->
   <div class="sidebar__search">
     <svg class="sidebar__search-icon" aria-hidden="true">
-      <use xlink:href="img/sprite.svg#icon-search"></use>
+      <img
+        src="/img/search.svg"
+        alt="My Logo"
+        class="sidebar__search-icon"
+      />
     </svg>
     <input
       type="search"
@@ -35,34 +41,54 @@
   <!-- Main navigation -->
   <nav class="sidebar__nav">
     <ul class="sidebar__nav-list">
-      <li class="sidebar__nav-item sidebar__nav-item--active">
+      <!-- Home -->
+      <li class="sidebar__nav-item sidebar__nav-item--active" data-view="home">
         <a href="#" class="sidebar__nav-link">
           <svg class="sidebar__nav-icon" aria-hidden="true">
-            <use xlink:href="img/sprite.svg#icon-home"></use>
+            <img
+              src="/img/ic_home_black_24px.svg"
+              alt="My Logo"
+              class="sidebar__nav-icon"
+            />
           </svg>
           Home
         </a>
       </li>
-      <li class="sidebar__nav-item">
+      <!-- Notifications -->
+      <li class="sidebar__nav-item" data-view="notifications">
         <a href="#" class="sidebar__nav-link">
           <svg class="sidebar__nav-icon" aria-hidden="true">
-            <use xlink:href="img/sprite.svg#icon-bell"></use>
+            <img
+              src="/img/ic_help_black_24px.svg"
+              alt="My Logo"
+              class="sidebar__nav-icon"
+            />
           </svg>
           Notifications
         </a>
       </li>
-      <li class="sidebar__nav-item">
+      <!-- My posts -->
+      <li class="sidebar__nav-item" data-view="myposts">
         <a href="#" class="sidebar__nav-link">
           <svg class="sidebar__nav-icon" aria-hidden="true">
-            <use xlink:href="img/sprite.svg#icon-posts"></use>
+            <img
+              src="/img/reddit-2.svg"
+              alt="My Logo"
+              class="sidebar__nav-icon"
+            />
           </svg>
           My posts
         </a>
       </li>
-      <li class="sidebar__nav-item sidebar__nav-dropdown">
+      <!-- My subreddits (dropdown) -->
+      <li class="sidebar__nav-item sidebar__nav-dropdown" data-view="mysubreddits">
         <a href="#" class="sidebar__nav-link">
           <svg class="sidebar__nav-icon" aria-hidden="true">
-            <use xlink:href="img/sprite.svg#icon-subreddit"></use>
+            <img
+              src="/img/ic_dashboard_black_24px.svg"
+              alt="My Logo"
+              class="sidebar__nav-icon"
+            />
           </svg>
           My subreddits
           <svg class="sidebar__nav-icon-chev" aria-hidden="true">
@@ -71,13 +97,13 @@
         </a>
         <ul class="sidebar__nav-sublist">
           <li class="sidebar__nav-subitem">
-            <a href="#" class="sidebar__nav-link">Gaming</a>
+            <a href="#" class="sidebar__nav-link" data-view="mysubreddits">Gaming</a>
           </li>
           <li class="sidebar__nav-subitem">
-            <a href="#" class="sidebar__nav-link">Funny</a>
+            <a href="#" class="sidebar__nav-link" data-view="mysubreddits">Funny</a>
           </li>
           <li class="sidebar__nav-subitem">
-            <a href="#" class="sidebar__nav-link">Series</a>
+            <a href="#" class="sidebar__nav-link" data-view="mysubreddits">Series</a>
           </li>
         </ul>
       </li>

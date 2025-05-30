@@ -1,31 +1,32 @@
+<!-- src/partials/header.html -->
 <header class="header">
   <div class="header__inner container">
-    <!-- Назва секції -->
-    <h1 class="header__title">All subreddits</h1>
-
     <!-- Вкладковий навбар -->
     <nav class="header__tabs">
       <ul class="header__tabs-list">
-        <li class="header__tabs-item header__tabs-item--active">
-          <a href="#" class="header__tabs-link">HOT</a>
+        <li class="header__tabs-item">
+          <a href="#" class="header__tab header__tab--active" data-view="all">All subreddits</a>
         </li>
         <li class="header__tabs-item">
-          <a href="#" class="header__tabs-link">NEW</a>
+          <a href="#" class="header__tab" data-view="hot">HOT</a>
         </li>
         <li class="header__tabs-item">
-          <a href="#" class="header__tabs-link">RISING</a>
+          <a href="#" class="header__tab" data-view="new">NEW</a>
         </li>
         <li class="header__tabs-item">
-          <a href="#" class="header__tabs-link">CONTROVERSIAL</a>
+          <a href="#" class="header__tab" data-view="rising">RISING</a>
         </li>
         <li class="header__tabs-item">
-          <a href="#" class="header__tabs-link">TOP</a>
+          <a href="#" class="header__tab" data-view="controversial">CONTROVERSIAL</a>
         </li>
         <li class="header__tabs-item">
-          <a href="#" class="header__tabs-link">GILDED</a>
+          <a href="#" class="header__tab" data-view="top">TOP</a>
         </li>
         <li class="header__tabs-item">
-          <a href="#" class="header__tabs-link">PROMOTED</a>
+          <a href="#" class="header__tab" data-view="gilded">GILDED</a>
+        </li>
+        <li class="header__tabs-item">
+          <a href="#" class="header__tab" data-view="promoted">PROMOTED</a>
         </li>
       </ul>
     </nav>

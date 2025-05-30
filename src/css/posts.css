@@ -1,9 +1,10 @@
 /* ===== Posts grid ===== */
 .posts {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   gap: 16px;
-  padding: 16px;
+  padding: 16px 0;
   box-sizing: border-box;
 }
 
@@ -13,6 +14,7 @@
   border: 1px solid #e5e5e5;
   border-radius: 4px;
   display: flex;
+  flex: 0 0 1200px;
   flex-direction: column;
   overflow: hidden;
 }
@@ -117,15 +119,15 @@
 
 /* ===== Comments button ===== */
 .post-card__comments {
-  margin-left: 16px;        /* відокремлює від блоку голосувань */
-  padding: 4px 6px;         /* трохи внутрішнього відступу, щоб було зручно кліком */
+  margin-left: 16px;
+  padding: 4px 6px;
   font-size: 0.85rem;
   color: #333333;
-  background: none;         /* прибираємо фон */
-  border: none;             /* прибираємо рамку */
+  background: none;
+  border: none;
   cursor: pointer;
   display: flex;
-  align-items: center;      /* іконка всередині теж по центру */
+  align-items: center; 
 }
 
 .post-card__comments:hover {

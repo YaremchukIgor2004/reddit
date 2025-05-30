@@ -15,7 +15,7 @@
 @import url('./header.css');
 @import url('./posts.css');
 @import url('./auth.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+@import url('./views.css');
+@import url('./myposts.css');
+@import url('./comments.css');
+

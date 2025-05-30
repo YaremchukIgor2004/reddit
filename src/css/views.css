@@ -1,0 +1,11 @@
+/* src/css/views.css */
+
+/* За замовчуванням усі “вкладки” (views) приховані */
+.view {
+  display: none;
+}
+
+/* Клас для активної вкладки — показуємо */
+.view--active {
+  display: block;
+}

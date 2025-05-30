@@ -17,15 +17,6 @@
   height: 56px;
 }
 
-/* ===== Section title ===== */
-.header__title {
-  margin: 0;
-  margin-right: 32px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333333;
-}
-
 /* ===== Tabs navigation ===== */
 .header__tabs-list {
   display: flex;
@@ -43,7 +34,7 @@
 }
 
 /* ===== Tab links ===== */
-.header__tabs-link {
+.header__tab {
   display: inline-block;
   padding: 4px 0;
   font-size: 0.875rem;
@@ -52,11 +43,11 @@
   text-decoration: none;
   color: #888888;
   border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
+  transition: color 0.2s, border-bottom-color 0.2s;
 }
 
 /* ===== Active tab ===== */
-.header__tabs-item--active .header__tabs-link {
+.header__tab--active {
   color: #ff4500;
-  border-color: #ff4500;
+  border-bottom-color: #ff4500;
 }
